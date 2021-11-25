@@ -1,7 +1,3 @@
-
-
-
-
 // Trending Product--------------------------------------------
 $(document).ready(function () {
     $('#responsive-trending').lightSlider({
@@ -12,7 +8,7 @@ $(document).ready(function () {
         speed: 600,
         controls: true,
         responsive: [{
-                breakpoint: 800,
+                breakpoint: 900,
                 settings: {
                     item: 3,
                     slideMove: 1,
@@ -64,3 +60,30 @@ $(document).ready(function () {
         slider.goToNextSlide();
     });
 });
+
+// Product Page Image Slider--------------------------------------------
+$(document).ready(function () {
+    $('#product-slider').lightSlider({
+        item: 1,
+        loop: false,
+        slideMove: 2,
+        easing: 'cubic-bezier(0.25, 0, 0.25, 1)',
+        speed: 600,
+        controls: false
+    });
+});
+
+// Image Show
+function readURL(input) {
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+
+        reader.onload = function (e) {
+            $('#blah')
+                .attr('src', e.target.result)
+                .width(200)
+        };
+
+        reader.readAsDataURL(input.files[0]);
+    }
+}

@@ -1,7 +1,7 @@
 // Trending Product--------------------------------------------
 $(document).ready(function () {
     $('#responsive-trending').lightSlider({
-        item: 5,
+        item: 4,
         loop: false,
         slideMove: 2,
         easing: 'cubic-bezier(0.25, 0, 0.25, 1)',
@@ -31,7 +31,7 @@ $(document).ready(function () {
     var slider = $("#featured-slider").lightSlider({
         controls: false,
         loop: true,
-        item: 5,
+        item: 4,
         pager: false,
         responsive: [{
                 breakpoint: 900,

@@ -31,8 +31,9 @@ $(document).ready(function () {
     var slider = $("#featured-slider").lightSlider({
         controls: false,
         loop: true,
-        item: 4,
+        item: 5,
         pager: false,
+        slideMargin: 0,
         responsive: [{
                 breakpoint: 900,
                 settings: {

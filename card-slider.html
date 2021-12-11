@@ -14,8 +14,8 @@
 
     <title>Card-slider</title>
     <style>
-        .slideControls {
-            border-bottom: 1px solid red;
+        .featured-slider .slideControls {
+            border-bottom: 1px solid rgb(112, 138, 110);
             width: 100%;
             height: 40px;
             line-height: 40px;
@@ -25,7 +25,7 @@
             z-index: 1;
         }
 
-        .slideControls a {
+        .featured-slider .slideControls a {
             position: absolute;
             top: 4px;
             width: 30px;
@@ -36,32 +36,36 @@
             color: white;
         }
 
-        .slideControls i {
+        .featured-slider .slideControls i {
             font-size: 30px;
         }
 
-        .slideControls .slideNext {
+        .featured-slider .slideControls .slideNext {
             right: 0px;
         }
 
-        .slideControls .slidePrev {
+        .featured-slider .slideControls .slidePrev {
             right: 35px;
         }
 
-        .card .imgBx img {
-            height: 200px;
+        .featured-slider .card .imgBx {
+            text-align: center;
+        }
+
+        .featured-slider .card .imgBx img {
+            height: 150px;
             object-fit: cover;
         }
 
-        .card .content .price {
+        .featured-slider .card .content .price {
             font-size: 12px;
         }
 
-        .card .content .order a {
+        .featured-slider .card .content .order a {
             color: white;
         }
 
-        .card .content .supplier {
+        .featured-slider .card .content .supplier {
             font-size: 13px;
             line-height: 17px;
         }
@@ -69,266 +73,248 @@
 </head>
 
 <body>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-8">
-                <section class="featured-slider py-5">
-                    <div class="container">
-                        <div class="row">
-                            <div class="slideControls">
-                                <span class="fw-bold btn btn-sm btn-success featured-title">
-                                    Featured Product
-                                </span>
-                                <a class="slidePrev">
-                                    <i class="fa fa-angle-left"></i>
-                                </a>
-                                <a class="slideNext">
-                                    <i class="fa fa-angle-right"></i>
-                                </a>
+    <section class="featured-slider py-5">
+        <div class="container">
+            <div class="row">
+                <div class="slideControls mb-3">
+                    <span class="fw-bold btn btn-sm btn-success featured-title">
+                        Featured Product
+                    </span>
+                    <a class="slidePrev">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a class="slideNext">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                </div>
+                <!-- Slider Start------------------------------------- -->
+                <ul id="featured-slider" class="cs-hidden">
+                    <!-- 1------------------- -->
+                    <li class="item-a col-3">
+                        <div class="card">
+                            <div class="card-body p-1">
+                                <div class="title mb-1">
+                                    <a href="#">
+                                        <span class="badge bg-danger">New</span>
+                                    </a>
+                                </div>
+                                <div class="imgBx">
+                                    <a href="#">
+                                        <img src="image/img-1.jpg" class="img-fluid" alt="">
+                                    </a>
+                                </div>
                             </div>
-                            <!-- Slider Start------------------------------------- -->
-                            <ul id="featured-slider" class="cs-hidden">
-                                <!-- 1------------------- -->
-                                <li class="item-a my-1">
-                                    <div class="card">
-                                        <div class="card-body p-1">
-                                            <div class="title">
-                                                <a href="#">
-                                                    <span class="badge bg-danger">New</span>
-                                                </a>
-                                            </div>
-                                            <div class="imgBx">
-                                                <a href="#">
-                                                    <img src="image/product-1.jpeg" class="img-fluid" alt="">
-                                                </a>
-                                            </div>
+                            <div class="card-footer bg-white">
+                                <div class="content">
+                                    <a href="#" class="text-decoration-none text-dark">
+                                        <p class="fs-6 fw-bold mb-0">Product Name or Details</p>
+                                    </a>
+                                    <div class="d-flex justify-content-between align-items-center my-1">
+                                        <div class="price">
+                                            <strong class="">Rs. 6500</strong>
+                                            <span>
+                                                <del>Rs. 9000</del>
+                                            </span>
                                         </div>
-                                        <div class="card-footer bg-white">
-                                            <div class="content">
-                                                <a href="#" class="text-decoration-none text-dark">
-                                                    <p class="fs-6 fw-bold mb-0">Product Name or Details</p>
-                                                </a>
-                                                <div class="d-flex justify-content-between align-items-center my-1">
-                                                    <div class="price">
-                                                        <strong class="">Rs. 6500</strong>
-                                                        <span>
-                                                            <del>Rs. 9000</del>
-                                                        </span>
-                                                    </div>
-                                                    <div class="order">
-                                                        <a href="#"
-                                                            class="badge bg-danger text-decoration-none">Order</a>
-                                                    </div>
-                                                </div>
-                                                <p class="supplier mb-0">Supplied By: <i>Lorem ipsum dolor sit amet.</i>
-                                                </p>
-                                                <p class="supplier mb-0">Details:<i> Lorem ipsum dolor sit amet.</i></p>
-                                            </div>
+                                        <div class="order">
+                                            <a href="#" class="badge bg-danger text-decoration-none">Order</a>
                                         </div>
                                     </div>
-                                </li>
-                                <!-- 1------------------- -->
-                                <li class="item-a my-1">
-                                    <div class="card">
-                                        <div class="card-body p-1">
-                                            <div class="title">
-                                                <a href="#">
-                                                    <span class="badge bg-danger">New</span>
-                                                </a>
-                                            </div>
-                                            <div class="imgBx">
-                                                <a href="#">
-                                                    <img src="image/product-1.jpeg" class="img-fluid" alt="">
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="card-footer bg-white">
-                                            <div class="content">
-                                                <a href="#" class="text-decoration-none text-dark">
-                                                    <p class="fs-6 fw-bold mb-0">Product Name or Details</p>
-                                                </a>
-                                                <div class="d-flex justify-content-between align-items-center my-1">
-                                                    <div class="price">
-                                                        <strong class="">Rs. 6500</strong>
-                                                        <span>
-                                                            <del>Rs. 9000</del>
-                                                        </span>
-                                                    </div>
-                                                    <div class="order">
-                                                        <a href="#"
-                                                            class="badge bg-danger text-decoration-none">Order</a>
-                                                    </div>
-                                                </div>
-                                                <p class="supplier mb-0">Supplied By: <i>Lorem ipsum dolor sit amet.</i>
-                                                </p>
-                                                <p class="supplier mb-0">Details:<i> Lorem ipsum dolor sit amet.</i></p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <!-- 1------------------- -->
-                                <li class="item-a my-1">
-                                    <div class="card">
-                                        <div class="card-body p-1">
-                                            <div class="title">
-                                                <a href="#">
-                                                    <span class="badge bg-danger">New</span>
-                                                </a>
-                                            </div>
-                                            <div class="imgBx">
-                                                <a href="#">
-                                                    <img src="image/product-1.jpeg" class="img-fluid" alt="">
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="card-footer bg-white">
-                                            <div class="content">
-                                                <a href="#" class="text-decoration-none text-dark">
-                                                    <p class="fs-6 fw-bold mb-0">Product Name or Details</p>
-                                                </a>
-                                                <div class="d-flex justify-content-between align-items-center my-1">
-                                                    <div class="price">
-                                                        <strong class="">Rs. 6500</strong>
-                                                        <span>
-                                                            <del>Rs. 9000</del>
-                                                        </span>
-                                                    </div>
-                                                    <div class="order">
-                                                        <a href="#"
-                                                            class="badge bg-danger text-decoration-none">Order</a>
-                                                    </div>
-                                                </div>
-                                                <p class="supplier mb-0">Supplied By: <i>Lorem ipsum dolor sit amet.</i>
-                                                </p>
-                                                <p class="supplier mb-0">Details:<i> Lorem ipsum dolor sit amet.</i></p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <!-- 1------------------- -->
-                                <li class="item-a my-1">
-                                    <div class="card">
-                                        <div class="card-body p-1">
-                                            <div class="title">
-                                                <a href="#">
-                                                    <span class="badge bg-danger">New</span>
-                                                </a>
-                                            </div>
-                                            <div class="imgBx">
-                                                <a href="#">
-                                                    <img src="image/product-1.jpeg" class="img-fluid" alt="">
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="card-footer bg-white">
-                                            <div class="content">
-                                                <a href="#" class="text-decoration-none text-dark">
-                                                    <p class="fs-6 fw-bold mb-0">Product Name or Details</p>
-                                                </a>
-                                                <div class="d-flex justify-content-between align-items-center my-1">
-                                                    <div class="price">
-                                                        <strong class="">Rs. 6500</strong>
-                                                        <span>
-                                                            <del>Rs. 9000</del>
-                                                        </span>
-                                                    </div>
-                                                    <div class="order">
-                                                        <a href="#"
-                                                            class="badge bg-danger text-decoration-none">Order</a>
-                                                    </div>
-                                                </div>
-                                                <p class="supplier mb-0">Supplied By: <i>Lorem ipsum dolor sit amet.</i>
-                                                </p>
-                                                <p class="supplier mb-0">Details:<i> Lorem ipsum dolor sit amet.</i></p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <!-- 1------------------- -->
-                                <li class="item-a my-1">
-                                    <div class="card">
-                                        <div class="card-body p-1">
-                                            <div class="title">
-                                                <a href="#">
-                                                    <span class="badge bg-danger">New</span>
-                                                </a>
-                                            </div>
-                                            <div class="imgBx">
-                                                <a href="#">
-                                                    <img src="image/product-1.jpeg" class="img-fluid" alt="">
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="card-footer bg-white">
-                                            <div class="content">
-                                                <a href="#" class="text-decoration-none text-dark">
-                                                    <p class="fs-6 fw-bold mb-0">Product Name or Details</p>
-                                                </a>
-                                                <div class="d-flex justify-content-between align-items-center my-1">
-                                                    <div class="price">
-                                                        <strong class="">Rs. 6500</strong>
-                                                        <span>
-                                                            <del>Rs. 9000</del>
-                                                        </span>
-                                                    </div>
-                                                    <div class="order">
-                                                        <a href="#"
-                                                            class="badge bg-danger text-decoration-none">Order</a>
-                                                    </div>
-                                                </div>
-                                                <p class="supplier mb-0">Supplied By: <i>Lorem ipsum dolor sit amet.</i>
-                                                </p>
-                                                <p class="supplier mb-0">Details:<i> Lorem ipsum dolor sit amet.</i></p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <!-- 1------------------- -->
-                                <li class="item-a my-1">
-                                    <div class="card">
-                                        <div class="card-body p-1">
-                                            <div class="title">
-                                                <a href="#">
-                                                    <span class="badge bg-danger">New</span>
-                                                </a>
-                                            </div>
-                                            <div class="imgBx">
-                                                <a href="#">
-                                                    <img src="image/product-1.jpeg" class="img-fluid" alt="">
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="card-footer bg-white">
-                                            <div class="content">
-                                                <a href="#" class="text-decoration-none text-dark">
-                                                    <p class="fs-6 fw-bold mb-0">Product Name or Details</p>
-                                                </a>
-                                                <div class="d-flex justify-content-between align-items-center my-1">
-                                                    <div class="price">
-                                                        <strong class="">Rs. 6500</strong>
-                                                        <span>
-                                                            <del>Rs. 9000</del>
-                                                        </span>
-                                                    </div>
-                                                    <div class="order">
-                                                        <a href="#"
-                                                            class="badge bg-danger text-decoration-none">Order</a>
-                                                    </div>
-                                                </div>
-                                                <p class="supplier mb-0">Supplied By: <i>Lorem ipsum dolor sit amet.</i>
-                                                </p>
-                                                <p class="supplier mb-0">Details:<i> Lorem ipsum dolor sit amet.</i></p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                            </ul>
+                                    <p class="supplier mb-0">Supplied By: <i>Lorem ipsum dolor sit amet.</i>
+                                    </p>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </section>
+                    </li>
+                    <!-- 2------------------- -->
+                    <li class="item-a col-3">
+                        <div class="card">
+                            <div class="card-body p-1">
+                                <div class="title mb-1">
+                                    <a href="#">
+                                        <span class="badge bg-danger">New</span>
+                                    </a>
+                                </div>
+                                <div class="imgBx">
+                                    <a href="#">
+                                        <img src="image/img-2.jpg" class="img-fluid" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="card-footer bg-white">
+                                <div class="content">
+                                    <a href="#" class="text-decoration-none text-dark">
+                                        <p class="fs-6 fw-bold mb-0">Product Name or Details</p>
+                                    </a>
+                                    <div class="d-flex justify-content-between align-items-center my-1">
+                                        <div class="price">
+                                            <strong class="">Rs. 6500</strong>
+                                            <span>
+                                                <del>Rs. 9000</del>
+                                            </span>
+                                        </div>
+                                        <div class="order">
+                                            <a href="#" class="badge bg-danger text-decoration-none">Order</a>
+                                        </div>
+                                    </div>
+                                    <p class="supplier mb-0">Supplied By: <i>Lorem ipsum dolor sit amet.</i>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- 3------------------- -->
+                    <li class="item-a col-3">
+                        <div class="card">
+                            <div class="card-body p-1">
+                                <div class="title mb-1">
+                                    <a href="#">
+                                        <span class="badge bg-danger">New</span>
+                                    </a>
+                                </div>
+                                <div class="imgBx">
+                                    <a href="#">
+                                        <img src="image/img-3.jpg" class="img-fluid" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="card-footer bg-white">
+                                <div class="content">
+                                    <a href="#" class="text-decoration-none text-dark">
+                                        <p class="fs-6 fw-bold mb-0">Product Name or Details</p>
+                                    </a>
+                                    <div class="d-flex justify-content-between align-items-center my-1">
+                                        <div class="price">
+                                            <strong class="">Rs. 6500</strong>
+                                            <span>
+                                                <del>Rs. 9000</del>
+                                            </span>
+                                        </div>
+                                        <div class="order">
+                                            <a href="#" class="badge bg-danger text-decoration-none">Order</a>
+                                        </div>
+                                    </div>
+                                    <p class="supplier mb-0">Supplied By: <i>Lorem ipsum dolor sit amet.</i>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- 4------------------- -->
+                    <li class="item-a col-3">
+                        <div class="card">
+                            <div class="card-body p-1">
+                                <div class="title mb-1">
+                                    <a href="#">
+                                        <span class="badge bg-danger">New</span>
+                                    </a>
+                                </div>
+                                <div class="imgBx">
+                                    <a href="#">
+                                        <img src="image/img-4.jpg" class="img-fluid" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="card-footer bg-white">
+                                <div class="content">
+                                    <a href="#" class="text-decoration-none text-dark">
+                                        <p class="fs-6 fw-bold mb-0">Product Name or Details</p>
+                                    </a>
+                                    <div class="d-flex justify-content-between align-items-center my-1">
+                                        <div class="price">
+                                            <strong class="">Rs. 6500</strong>
+                                            <span>
+                                                <del>Rs. 9000</del>
+                                            </span>
+                                        </div>
+                                        <div class="order">
+                                            <a href="#" class="badge bg-danger text-decoration-none">Order</a>
+                                        </div>
+                                    </div>
+                                    <p class="supplier mb-0">Supplied By: <i>Lorem ipsum dolor sit amet.</i>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- 5------------------- -->
+                    <li class="item-a col-3">
+                        <div class="card">
+                            <div class="card-body p-1">
+                                <div class="title mb-1">
+                                    <a href="#">
+                                        <span class="badge bg-danger">New</span>
+                                    </a>
+                                </div>
+                                <div class="imgBx">
+                                    <a href="#">
+                                        <img src="image/img-5.jpg" class="img-fluid" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="card-footer bg-white">
+                                <div class="content">
+                                    <a href="#" class="text-decoration-none text-dark">
+                                        <p class="fs-6 fw-bold mb-0">Product Name or Details</p>
+                                    </a>
+                                    <div class="d-flex justify-content-between align-items-center my-1">
+                                        <div class="price">
+                                            <strong class="">Rs. 6500</strong>
+                                            <span>
+                                                <del>Rs. 9000</del>
+                                            </span>
+                                        </div>
+                                        <div class="order">
+                                            <a href="#" class="badge bg-danger text-decoration-none">Order</a>
+                                        </div>
+                                    </div>
+                                    <p class="supplier mb-0">Supplied By: <i>Lorem ipsum dolor sit amet.</i>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <!-- 6------------------- -->
+                    <li class="item-a col-3">
+                        <div class="card">
+                            <div class="card-body p-1">
+                                <div class="title mb-1">
+                                    <a href="#">
+                                        <span class="badge bg-danger">New</span>
+                                    </a>
+                                </div>
+                                <div class="imgBx">
+                                    <a href="#">
+                                        <img src="image/img-6.jpg" class="img-fluid" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="card-footer bg-white">
+                                <div class="content">
+                                    <a href="#" class="text-decoration-none text-dark">
+                                        <p class="fs-6 fw-bold mb-0">Product Name or Details</p>
+                                    </a>
+                                    <div class="d-flex justify-content-between align-items-center my-1">
+                                        <div class="price">
+                                            <strong class="">Rs. 6500</strong>
+                                            <span>
+                                                <del>Rs. 9000</del>
+                                            </span>
+                                        </div>
+                                        <div class="order">
+                                            <a href="#" class="badge bg-danger text-decoration-none">Order</a>
+                                        </div>
+                                    </div>
+                                    <p class="supplier mb-0">Supplied By: <i>Lorem ipsum dolor sit amet.</i>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
             </div>
         </div>
-    </div>
+    </section>
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="js/jquery.js"></script>
